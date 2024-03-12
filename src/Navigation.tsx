@@ -1,8 +1,16 @@
+/* eslint-disable react/no-unstable-nested-components */
 // src/Navigation.tsx
 
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {NavigationContainer} from '@react-navigation/native';
+
+// icons
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
+// screens
 import Space from './screens/Space';
 import Sandclock from './screens/Sandclock';
 import Time from './screens/Time';
@@ -11,26 +19,88 @@ import Journal from './screens/Journal';
 
 const Tab = createBottomTabNavigator();
 
-const navigatorOptions = {
+const commonScreenOptions = {
   headerShown: false,
-//   tabBarStyle: {
-//     backgroundColor: 'black',
-//   },
-//   tabBarLabelStyle: {
-//     color: 'red',
-//   },
+  tabBarShowLabel: false, // change to falsek
+  tabBarHideOnKeyboard: true,
+  tabBarActiveTintColor: 'white', // change to some cool color
+  tabBarInactiveTintColor: 'grey', // change to white
+  tabBarStyle: {
+    backgroundColor: 'black',
+    height: 70,
+    borderTopWidth: 0,
+    elevation: 0, // for Android
+    shadowOffset: {
+      width: 0,
+      height: 0, // for iOS
+    },
+  },
 };
 
 const Navigation: React.FC = () => {
   return (
     <NavigationContainer>
-      <Tab.Navigator screenOptions={navigatorOptions}>
-        {/* Remove names later */}
-        <Tab.Screen name="Space" component={Space} />
-        <Tab.Screen name="Sandclock" component={Sandclock} />
-        <Tab.Screen name="Time" component={Time} />
-        <Tab.Screen name="Direction" component={Direction} />
-        <Tab.Screen name="Journal" component={Journal} />
+      <Tab.Navigator
+        initialRouteName="Time"
+        backBehavior="history"
+        screenOptions={commonScreenOptions}>
+        <Tab.Screen
+          name="Space"
+          component={Space}
+          options={{
+            tabBarIcon: ({color, size}) => (
+              <MaterialCommunityIcons
+                name="map-marker"
+                color={color}
+                size={size}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Sandclock"
+          component={Sandclock}
+          options={{
+            tabBarIcon: ({color, size}) => (
+              <Ionicons name="hourglass" color={color} size={size} /> // hourglass-outline
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Time"
+          component={Time}
+          options={{
+            tabBarIcon: ({color, size}) => (
+              <MaterialCommunityIcons
+                name="checkbox-blank-circle-outline"
+                color={color}
+                size={size}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Direction"
+          component={Direction}
+          options={{
+            tabBarIcon: ({color, size}) => (
+              <MaterialIcons name="question-mark" color={color} size={size} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Journal"
+          component={Journal}
+          options={{
+            tabBarIcon: ({color, size}) => (
+              <MaterialCommunityIcons
+                name="file-document-edit-outline"
+                color={color}
+                size={size}
+              />
+            ),
+          }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );

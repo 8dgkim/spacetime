@@ -1,3 +1,18 @@
+# spacetime
+
+
+## TODO
+- apply features in each screen
+
+
+## dev log
+
+
+- 2024-03-12: completed Navigation; added icons; set backBehavior; modify readme
+- 2024-03-11: initial commit; created react-native app; initial bottomTabNavigator
+
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started

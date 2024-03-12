@@ -7,20 +7,18 @@ export const commonStyles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  text: {
-    fontSize: 20,
-    fontFamily: 'Times New Roman',
-    // color: 'white',
-  },
-});
-
-export const darkTheme = StyleSheet.create({
-  container: {
     backgroundColor: 'black',
   },
-  text: {
+  text_en: {
+    fontSize: 20,
+    fontFamily: 'times',
+    // fontWeight: 'bold',
+    // fontStyle: 'italic',
     color: 'white',
-    fontFamily: 'Times New Roman',
+  },
+  text_kr: {
+    fontSize: 20,
+    fontFamily: 'NanumMyeongjoBold',
+    color: 'white',
   },
 });

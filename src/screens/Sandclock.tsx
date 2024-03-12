@@ -2,11 +2,12 @@
 
 import React from 'react';
 import {View, Text} from 'react-native';
+import {commonStyles} from '../styles/styles';
 
 const Sandclock: React.FC = () => {
   return (
-    <View>
-      <Text>Sandclock</Text>
+    <View style={commonStyles.container}>
+      <Text style={commonStyles.text_en}>Sandclock</Text>
     </View>
   );
 };

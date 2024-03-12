@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/NanumBarunGothic.otf",
+      "sha1": "31807406fbe00cca4c9da3f45c8f8a17f88ef98a"
+    },
+    {
+      "path": "src/assets/fonts/NanumMyeongjo.otf",
+      "sha1": "1b75cb9703613cb75bb8fc8a2fdb538853473017"
+    },
+    {
+      "path": "src/assets/fonts/NanumMyeongjoBold.otf",
+      "sha1": "42590d385125e8eedf8d448ba02f4aa0a87458b5"
+    },
+    {
+      "path": "src/assets/fonts/Pretendard-ExtraBold.otf",
+      "sha1": "61ffc8a631036d6ce0a02129d9fd4e43fdff2ee7"
+    }
+  ]
+}
