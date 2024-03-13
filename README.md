@@ -3,9 +3,7 @@
 
 ## TODO
 - apply features in each screen
-
-### Time
-- display time; refer to [time app](https://github.com/8dgkim/time)
+- remove fonts.ts, theme.ts under src/styles/
 
 ### Direction
 - remake time distance measurement; also refer to [time app](https://github.com/8dgkim/time)
@@ -28,7 +26,10 @@
 
 ## dev log
 
-- 2024-03-12: completed Navigation; added icons; set backBehavior; modify readme
+- 2024-03-12
+   - completed Navigation; added icons; set backBehavior; modify readme
+   - changed app icon(s)
+   - src/screens/time.tsx: display time; finished
 - 2024-03-11: initial commit; created react-native app; initial bottomTabNavigator
 
 

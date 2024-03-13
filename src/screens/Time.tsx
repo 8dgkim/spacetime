@@ -1,14 +1,46 @@
 // src/screens/Time.tsx
 
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Text} from 'react-native';
 import {commonStyles} from '../styles/styles';
 
 const Time: React.FC = () => {
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 10); // update `currentTime` every 10 milliseconds
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatDate = (date: Date) => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}:${month}:${day}`;
+  };
+
+  const formatTime = (time: Date) => {
+    const hours = String(time.getHours()).padStart(2, '0');
+    const minutes = String(time.getMinutes()).padStart(2, '0');
+    const seconds = String(time.getSeconds()).padStart(2, '0');
+    const milliseconds = String(time.getMilliseconds()).padStart(3, '0');
+    return `${hours}:${minutes}:${seconds}:${milliseconds}`;
+  };
+
   return (
     <View style={commonStyles.container}>
-      <Text style={commonStyles.text_en}>Time</Text>
-      <Text style={commonStyles.text_kr}>시간</Text>
+      <Text style={commonStyles.time_date}>
+        {/* {currentTime.toLocaleDateString()} */}
+        {formatDate(currentTime)}
+      </Text>
+      <View style={{height: 10}} />
+      <Text style={commonStyles.time_time}>
+        {/* {currentTime.toLocaleTimeString()} */}
+        {formatTime(currentTime)}
+      </Text>
     </View>
   );
 };
