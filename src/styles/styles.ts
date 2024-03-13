@@ -9,6 +9,11 @@ export const commonStyles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'black',
   },
+  inner: {
+    alignItems: 'center',
+    backgroundColor: 'black',
+    width: '100%',
+  },
   text_en: {
     fontSize: 30,
     fontFamily: 'times',
@@ -32,5 +37,20 @@ export const commonStyles = StyleSheet.create({
     fontFamily: 'times',
     fontWeight: 'bold',
     color: 'white',
+  },
+});
+
+export const directionStyles = StyleSheet.create({
+  input: {
+    width: '92%',
+    height: 40,
+    paddingHorizontal: 10,
+    borderColor: 'white',
+    borderBottomWidth: 1,
+    borderRadius: 4,
+    fontSize: 18,
+    fontFamily: 'times',
+    color: 'white',
+    textAlignVertical: 'center',
   },
 });

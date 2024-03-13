@@ -21,7 +21,7 @@ const Tab = createBottomTabNavigator();
 
 const commonScreenOptions = {
   headerShown: false,
-  tabBarShowLabel: false, // change to falsek
+  tabBarShowLabel: false, // change to false
   tabBarHideOnKeyboard: true,
   tabBarActiveTintColor: 'white', // change to some cool color
   tabBarInactiveTintColor: 'grey', // change to white
@@ -41,7 +41,7 @@ const Navigation: React.FC = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName="Time"
+        initialRouteName="Time" // temp change for dev & debug mode
         backBehavior="history"
         screenOptions={commonScreenOptions}>
         <Tab.Screen
