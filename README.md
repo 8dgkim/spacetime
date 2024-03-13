@@ -2,12 +2,9 @@
 - personal superapp project
 
 ## TODO
-- apply features in each screen
+- apply features on each screen
+- request Android permissions
 
-### Direction
-- remake time distance measurement; also refer to [time app](https://github.com/8dgkim/time)
-- fix negative time distance
-- fix empty TextInput behavior after some input is erased
 
 ### Journal
 - set stack navigator
@@ -15,7 +12,13 @@
 - decide file type
 - decide text editor features
 - decide metadata to store
+- passcode protection for entries
+- sync option; but where?
 
+### Direction
+- change to bold text
+- fix negative time distance
+- fix empty TextInput behavior after some input is erased
 
 ### Sandclock
 - design on Figma
@@ -27,6 +30,9 @@
 
 ## dev log
 
+- 2024-03-13
+   - branch: screen-journal
+      - request Android permissions
 - 2024-03-12
    - completed Navigation; added icons; set backBehavior; modify readme
    - changed app icon(s)

@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 // src/screens/Direction.tsx
 
 import React, {useState, useEffect} from 'react';

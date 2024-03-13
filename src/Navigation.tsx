@@ -38,10 +38,12 @@ const commonScreenOptions = {
 };
 
 const Navigation: React.FC = () => {
+  // TODO
+  // StatusBar -> hide status bar for all screens
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName="Time" // temp change for dev & debug mode
+        initialRouteName="Journal" // TODO: change for dev & debug mode
         backBehavior="history"
         screenOptions={commonScreenOptions}>
         <Tab.Screen

@@ -1,5 +1,9 @@
 // styles.ts
 
+// commonStyles
+// directionStyles
+// permissionStyles
+
 import {StyleSheet} from 'react-native';
 
 export const commonStyles = StyleSheet.create({
@@ -52,5 +56,40 @@ export const directionStyles = StyleSheet.create({
     fontFamily: 'times',
     color: 'white',
     textAlignVertical: 'center',
+  },
+});
+
+export const permissionStyles = StyleSheet.create({
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    backgroundColor: 'black',
+  },
+  modalContent: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'black',
+    borderTopColor: 'white',
+    borderTopWidth: 2,
+    width: '90%',
+    height: 100,
+    borderRadius: 8,
+    elevation: 0,
+  },
+  modalText: {
+    fontSize: 18,
+    fontFamily: 'times',
+    fontStyle: 'italic',
+    color: 'white',
+  },
+  modalContentOnPressed: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'grey',
+    width: '100%',
+    height: 80,
+    borderRadius: 5,
+    elevation: 0,
   },
 });
