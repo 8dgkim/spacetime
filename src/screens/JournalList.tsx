@@ -3,20 +3,18 @@
 
 import React, {useState, useEffect} from 'react';
 import {View, Text, FlatList, Pressable, Dimensions} from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import RNFS, {ExternalDirectoryPath} from 'react-native-fs';
+import {useNavigation} from '@react-navigation/native';
+// import RNFS, {ExternalDirectoryPath} from 'react-native-fs';
 import {commonStyles, journalStyles} from '../styles/styles';
-import Entry from './Entry';
 
 const JournalList: React.FC = () => {
   // const handlePress = () => {
   //   console.log('works');
   // };
+  const navigation = useNavigation();
 
   const [rectangles, setRectangles] = useState([]);
   const screenWidth = Dimensions.get('window').width;
-
-  const navigation = useNavigation();
 
   const handlePress = () => {
     navigation.navigate('Journal', {screen: 'Entry'});
@@ -24,11 +22,10 @@ const JournalList: React.FC = () => {
     const boxWidth = screenWidth * 0.9;
 
     // Create a new rectangle box and add it to the list
+    // Add properties
     const newRectangle = {
       id: rectangles.length + 1,
-      color: 'red',
       width: boxWidth,
-      height: 60,
     };
     setRectangles(prevRectangles => [...prevRectangles, newRectangle]);
   };
@@ -38,11 +35,17 @@ const JournalList: React.FC = () => {
       <View
         style={{
           width: item.width,
-          height: item.height,
-          backgroundColor: item.color,
-          margin: 5,
-        }}
-      />
+          height: 56,
+          backgroundColor: 'black',
+          margin: 8,
+          borderBottomWidth: 1,
+          borderBottomColor: 'white',
+          borderRightWidth: 1,
+          borderRightColor: 'white',
+          borderRadius: 8,
+        }}>
+        <Text style={commonStyles.text_en}>{item.id}</Text>
+      </View>
     );
   };
 
@@ -67,7 +70,6 @@ const JournalList: React.FC = () => {
         <Pressable onPressIn={handlePress} style={journalStyles.pressable}>
           <Text style={journalStyles.pressableText}>write...</Text>
         </Pressable>
-        {/* <Text>test3</Text> */}
       </View>
     </View>
   );

@@ -109,7 +109,7 @@ export const permissionStyles = StyleSheet.create({
 
 export const journalStyles = StyleSheet.create({
   header: {
-    flex: 2,
+    flex: 1.5,
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
@@ -121,11 +121,11 @@ export const journalStyles = StyleSheet.create({
     height: 1.5,
   },
   list: {
-    flex: 7,
+    flex: 7.5,
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    backgroundColor: 'grey',
+    backgroundColor: 'black',
   },
   flatlist: {
     width: '100%',
@@ -134,13 +134,13 @@ export const journalStyles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    width: '100%',
+    width: '92%',
     height: '100%',
     backgroundColor: 'black',
     // borderColor: 'white',
     borderBottomColor: 'white',
     borderTopColor: 'white',
-    borderWidth: 0.6,
+    borderWidth: 0.8,
   },
   pressable: {
     flex: 1,
@@ -153,5 +153,19 @@ export const journalStyles = StyleSheet.create({
     fontFamily: 'times',
     fontStyle: 'italic',
     color: 'white',
+  },
+});
+
+export const entryStyles = StyleSheet.create({
+  input: {
+    flex: 1,
+    width: '94%',
+    borderColor: 'white',
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    fontSize: 18,
+    fontFamily: 'times',
+    color: 'white',
+    textAlignVertical: 'top',
   },
 });

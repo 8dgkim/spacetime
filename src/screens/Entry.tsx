@@ -1,15 +1,24 @@
 // src/screens/Entry.tsx
 
-import React from 'react';
-import {View, Text} from 'react-native';
-import {commonStyles} from '../styles/styles';
+import React, {useState} from 'react';
+import {View, Text, TextInput} from 'react-native';
+import {commonStyles, entryStyles} from '../styles/styles';
 
-const EditScreen = () => {
+const Entry = () => {
+  const [text, setText] = useState('');
+
   return (
     <View style={commonStyles.container}>
-      <Text style={commonStyles.text_en}>This is the Edit Screen</Text>
+      <Text style={commonStyles.title_en}>Entry</Text>
+      <View style={{height: 10}} />
+      <TextInput
+        style={entryStyles.input}
+        value={text}
+        onChangeText={setText}
+        multiline={true}
+      />
     </View>
   );
 };
 
-export default EditScreen;
+export default Entry;

@@ -37,6 +37,7 @@
       - request Android permissions
       - set up rough UI (box creation)
       - set nested navigator; minor style changes
+      - set Entry screen
 - 2024-03-12
    - completed Navigation; added icons; set backBehavior; modify readme
    - changed app icon(s)
