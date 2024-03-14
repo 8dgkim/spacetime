@@ -99,7 +99,7 @@ const Direction: React.FC = () => {
       style={commonStyles.container}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <View style={commonStyles.inner}>
-        <Text style={commonStyles.text_en}>Direction</Text>
+        <Text style={commonStyles.title_en}>Direction</Text>
         <View style={{height: 30}} />
         <TextInput
           style={directionStyles.input}
@@ -113,7 +113,6 @@ const Direction: React.FC = () => {
         {targetTime !== '' && (
           <Text style={commonStyles.text_en}>{timeDistance}</Text>
         )}
-        {/* <Text>{targetTime}</Text> */}
       </View>
     </KeyboardAvoidingView>
   );

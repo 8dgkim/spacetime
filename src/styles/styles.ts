@@ -12,21 +12,34 @@ export const commonStyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'black',
+    // flexDirection: 'column',
   },
   inner: {
     alignItems: 'center',
     backgroundColor: 'black',
     width: '100%',
   },
-  text_en: {
+  title_en: {
     fontSize: 30,
     fontFamily: 'times',
     // fontWeight: 'bold',
     // fontStyle: 'italic',
     color: 'white',
   },
-  text_kr: {
+  title_kr: {
     fontSize: 30,
+    fontFamily: 'NanumMyeongjoBold',
+    color: 'white',
+  },
+  text_en: {
+    fontSize: 15,
+    fontFamily: 'times',
+    // fontWeight: 'bold',
+    // fontStyle: 'italic',
+    color: 'white',
+  },
+  text_kr: {
+    fontSize: 15,
     fontFamily: 'NanumMyeongjoBold',
     color: 'white',
   },
@@ -91,5 +104,54 @@ export const permissionStyles = StyleSheet.create({
     height: 80,
     borderRadius: 5,
     elevation: 0,
+  },
+});
+
+export const journalStyles = StyleSheet.create({
+  header: {
+    flex: 2,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    backgroundColor: 'black',
+  },
+  line: {
+    width: '85%',
+    backgroundColor: 'white',
+    height: 1.5,
+  },
+  list: {
+    flex: 7,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    backgroundColor: 'grey',
+  },
+  flatlist: {
+    width: '100%',
+  },
+  new: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'black',
+    // borderColor: 'white',
+    borderBottomColor: 'white',
+    borderTopColor: 'white',
+    borderWidth: 0.6,
+  },
+  pressable: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+  },
+  pressableText: {
+    fontSize: 18,
+    fontFamily: 'times',
+    fontStyle: 'italic',
+    color: 'white',
   },
 });

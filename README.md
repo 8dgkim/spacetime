@@ -4,6 +4,7 @@
 ## TODO
 - apply features on each screen
 - request Android permissions
+- hide status bar
 
 
 ### Journal

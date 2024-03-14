@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 // src/screens/Journal.tsx
 
 // TODO
@@ -5,33 +6,67 @@
 // use FlatList for list of entries
 
 import React, {useState, useEffect} from 'react';
-import {
-  View,
-  Text,
-  // FlatList,
-} from 'react-native';
-import RNFS from 'react-native-fs';
-import {commonStyles} from '../styles/styles';
+import {View, Text, FlatList, Pressable, Dimensions} from 'react-native';
+import RNFS, {ExternalDirectoryPath} from 'react-native-fs';
+import {commonStyles, journalStyles} from '../styles/styles';
 
 const Journal: React.FC = () => {
-  // TODO: experiment; remove later
-  const [downloadsFolder, setDownloadsFolder] = useState('');
-  const [documentsFolder, setDocumentsFolder] = useState('');
-  const [externalDirectory, setExternalDirectory] = useState('');
-  // const [files, setFiles] = useState([]);
-  useEffect(() => {
-    //get user's file paths from react-native-fs
-    setDownloadsFolder(RNFS.DownloadDirectoryPath);
-    setDocumentsFolder(RNFS.DocumentDirectoryPath); //alternative to MainBundleDirectory.
-    setExternalDirectory(RNFS.ExternalStorageDirectoryPath);
-  }, []);
+  // const handlePress = () => {
+  //   console.log('works');
+  // };
+
+  const [rectangles, setRectangles] = useState([]);
+  const screenWidth = Dimensions.get('window').width;
+
+  const handlePress = () => {
+    const boxWidth = screenWidth * 0.9;
+
+    // Create a new rectangle box and add it to the list
+    const newRectangle = {
+      id: rectangles.length + 1,
+      color: 'red',
+      width: boxWidth,
+      height: 60,
+    };
+    setRectangles(prevRectangles => [...prevRectangles, newRectangle]);
+  };
+
+  const renderRectangle = ({item}) => {
+    return (
+      <View
+        style={{
+          width: item.width,
+          height: item.height,
+          backgroundColor: item.color,
+          margin: 5,
+        }}
+      />
+    );
+  };
 
   return (
     <View style={commonStyles.container}>
-      <Text style={commonStyles.text_en}>Journal</Text>
-      <Text>Downloads: {downloadsFolder}</Text>
-      <Text>Documents: {documentsFolder}</Text>
-      <Text>External storgage: {externalDirectory}</Text>
+      <View style={journalStyles.header}>
+        <Text style={commonStyles.title_en}>Journal</Text>
+        <View style={{flex: 0.1}} />
+        <View style={journalStyles.line} />
+      </View>
+      <View style={journalStyles.list}>
+        <FlatList
+          data={rectangles}
+          renderItem={renderRectangle}
+          keyExtractor={item => item.id.toString()}
+          horizontal={false}
+          style={journalStyles.flatlist}
+          contentContainerStyle={{alignItems: 'center'}}
+        />
+      </View>
+      <View style={journalStyles.new}>
+        <Pressable onPressIn={handlePress} style={journalStyles.pressable}>
+          <Text style={journalStyles.pressableText}>write...</Text>
+        </Pressable>
+        {/* <Text>test3</Text> */}
+      </View>
     </View>
   );
 };
