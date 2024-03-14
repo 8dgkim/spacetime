@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 // src/screens/Entry.tsx
 
 import React, {useState} from 'react';

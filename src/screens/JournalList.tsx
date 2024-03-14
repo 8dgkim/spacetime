@@ -1,16 +1,22 @@
 /* eslint-disable react-native/no-inline-styles */
 // src/screens/JournalList.tsx
 
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {View, Text, FlatList, Pressable, Dimensions} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import {useFocusEffect, useNavigation} from '@react-navigation/native';
 // import RNFS, {ExternalDirectoryPath} from 'react-native-fs';
 import {commonStyles, journalStyles} from '../styles/styles';
 
+// import {requestWriteExternalStoragePermission} from '../AndroidPermissions';
+
 const JournalList: React.FC = () => {
-  // const handlePress = () => {
-  //   console.log('works');
-  // };
+  // useFocusEffect(
+  //   React.useCallback(() => {
+  //     // Invoke permission request when the tab gains focus
+  //     requestWriteExternalStoragePermission();
+  //   }, []),
+  // );
+
   const navigation = useNavigation();
 
   const [rectangles, setRectangles] = useState([]);
@@ -27,7 +33,7 @@ const JournalList: React.FC = () => {
       id: rectangles.length + 1,
       width: boxWidth,
     };
-    setRectangles(prevRectangles => [...prevRectangles, newRectangle]);
+    setRectangles(prevRectangles => [newRectangle, ...prevRectangles]);
   };
 
   const renderRectangle = ({item}) => {
