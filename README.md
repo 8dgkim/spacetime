@@ -9,9 +9,10 @@
 
 ### Journal
 - set stack navigator
+- set edit entry screen
+   - decide text editor features
 - learn local storage management
-- decide file type
-- decide text editor features
+- decide file type: md
 - decide metadata to store
 - passcode protection for entries
 - sync option; but where?
@@ -34,6 +35,8 @@
 - 2024-03-13
    - branch: screen-journal
       - request Android permissions
+      - set up rough UI (box creation)
+      - set nested navigator; minor style changes
 - 2024-03-12
    - completed Navigation; added icons; set backBehavior; modify readme
    - changed app icon(s)

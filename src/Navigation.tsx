@@ -15,9 +15,24 @@ import Space from './screens/Space';
 import Sandclock from './screens/Sandclock';
 import Time from './screens/Time';
 import Direction from './screens/Direction';
-import Journal from './screens/Journal';
+// import Journal from './screens/Journal';
+import {createStackNavigator} from '@react-navigation/stack';
+import JournalList from './screens/JournalList';
+import Entry from './screens/Entry';
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
+
+const Journal: React.FC = () => {
+  return (
+    <Stack.Navigator
+      initialRouteName="JournalList"
+      screenOptions={commonScreenOptions}>
+      <Stack.Screen name="JournalList" component={JournalList} />
+      <Stack.Screen name="Entry" component={Entry} />
+    </Stack.Navigator>
+  );
+};
 
 const commonScreenOptions = {
   headerShown: false,

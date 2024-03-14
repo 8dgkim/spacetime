@@ -111,7 +111,7 @@ const Direction: React.FC = () => {
         />
         <View style={{height: 10}} />
         {targetTime !== '' && (
-          <Text style={commonStyles.text_en}>{timeDistance}</Text>
+          <Text style={commonStyles.time_date}>{timeDistance}</Text>
         )}
       </View>
     </KeyboardAvoidingView>

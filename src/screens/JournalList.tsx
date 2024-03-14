@@ -1,16 +1,14 @@
 /* eslint-disable react-native/no-inline-styles */
-// src/screens/Journal.tsx
-
-// TODO
-// use react-native-fs for direct externaldirectory access and read write access
-// use FlatList for list of entries
+// src/screens/JournalList.tsx
 
 import React, {useState, useEffect} from 'react';
 import {View, Text, FlatList, Pressable, Dimensions} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import RNFS, {ExternalDirectoryPath} from 'react-native-fs';
 import {commonStyles, journalStyles} from '../styles/styles';
+import Entry from './Entry';
 
-const Journal: React.FC = () => {
+const JournalList: React.FC = () => {
   // const handlePress = () => {
   //   console.log('works');
   // };
@@ -18,7 +16,11 @@ const Journal: React.FC = () => {
   const [rectangles, setRectangles] = useState([]);
   const screenWidth = Dimensions.get('window').width;
 
+  const navigation = useNavigation();
+
   const handlePress = () => {
+    navigation.navigate('Journal', {screen: 'Entry'});
+
     const boxWidth = screenWidth * 0.9;
 
     // Create a new rectangle box and add it to the list
@@ -71,4 +73,4 @@ const Journal: React.FC = () => {
   );
 };
 
-export default Journal;
+export default JournalList;
