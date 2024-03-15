@@ -33,7 +33,7 @@
 ## dev log
 - 2024-03-14
    - branch: screen-journal
-      - Android permissions not working
+      - Android permissions not working; removed for now
          - read/write external storage...
          - need to figure out why permission is denied
       - new boxes appear on top
