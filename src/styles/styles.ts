@@ -1,8 +1,10 @@
-// styles.ts
+// src/styles/styles.ts
 
 // commonStyles
+// spaceStyles
 // directionStyles
 // permissionStyles
+// journalStyles
 
 import {StyleSheet} from 'react-native';
 
@@ -12,7 +14,6 @@ export const commonStyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'black',
-    // flexDirection: 'column',
   },
   inner: {
     alignItems: 'center',
@@ -39,9 +40,10 @@ export const commonStyles = StyleSheet.create({
     color: 'white',
   },
   text_kr: {
-    fontSize: 15,
+    fontSize: 18,
     fontFamily: 'NanumMyeongjoBold',
     color: 'white',
+    width: '92%',
   },
   time_date: {
     fontSize: 30,
@@ -54,6 +56,34 @@ export const commonStyles = StyleSheet.create({
     fontFamily: 'times',
     fontWeight: 'bold',
     color: 'white',
+  },
+});
+
+export const spaceStyles = StyleSheet.create({
+  grid: {
+    width: '80%',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 10,
+    marginTop: 10,
+  },
+  row: {
+    justifyContent: 'flex-start',
+    alignItems: 'flex-end',
+    marginRight: 6,
+  },
+  space: {
+    fontSize: 30,
+    fontFamily: 'times',
+    fontWeight: 'bold',
+    color: 'white',
+    marginVertical: -3,
+  },
+  humble: {
+    fontSize: 12,
+    fontFamily: 'NanumMyeongjoBold',
+    marginTop: 10,
   },
 });
 

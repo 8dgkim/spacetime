@@ -26,9 +26,6 @@
 - design on Figma
 - set behaviors and logic
 
-### Space
-- tbd
-
 
 ## dev log
 - 2024-03-14
@@ -37,6 +34,8 @@
          - read/write external storage...
          - need to figure out why permission is denied
       - new boxes appear on top
+   - branch: screen-space
+      - finished
 - 2024-03-13
    - branch: screen-journal
       - request Android permissions
