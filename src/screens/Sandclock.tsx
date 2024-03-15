@@ -7,7 +7,7 @@ import {commonStyles} from '../styles/styles';
 const Sandclock: React.FC = () => {
   return (
     <View style={commonStyles.container}>
-      <Text style={commonStyles.text_en}>Sandclock</Text>
+      <Text style={commonStyles.title_en}>Sandclock</Text>
     </View>
   );
 };

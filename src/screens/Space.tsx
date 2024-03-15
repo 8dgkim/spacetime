@@ -7,7 +7,7 @@ import {commonStyles} from '../styles/styles';
 const Space: React.FC = () => {
   return (
     <View style={commonStyles.container}>
-      <Text style={commonStyles.text_en}>Space</Text>
+      <Text style={commonStyles.title_en}>Space</Text>
     </View>
   );
 };

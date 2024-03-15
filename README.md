@@ -2,20 +2,25 @@
 - personal superapp project
 
 ## TODO
-- apply features in each screen
+- apply features on each screen
+- request Android permissions
+- hide status bar
 
-### Direction
-- remake time distance measurement; also refer to [time app](https://github.com/8dgkim/time)
-- fix negative time distance
-- fix empty TextInput behavior after some input is erased
 
 ### Journal
 - set stack navigator
+- set edit entry screen
+   - decide text editor features
 - learn local storage management
-- decide file type
-- decide text editor features
+- decide file type: md
 - decide metadata to store
+- passcode protection for entries
+- sync option; but where?
 
+### Direction
+- change to bold text
+- fix negative time distance
+- fix empty TextInput behavior after some input is erased
 
 ### Sandclock
 - design on Figma
@@ -26,7 +31,18 @@
 
 
 ## dev log
-
+- 2024-03-14
+   - branch: screen-journal
+      - Android permissions not working
+         - read/write external storage...
+         - need to figure out why permission is denied
+      - new boxes appear on top
+- 2024-03-13
+   - branch: screen-journal
+      - request Android permissions
+      - set up rough UI (box creation)
+      - set nested navigator; minor style changes
+      - set Entry screen
 - 2024-03-12
    - completed Navigation; added icons; set backBehavior; modify readme
    - changed app icon(s)
@@ -57,7 +73,7 @@ yarn start
 
 Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
-### For Android
+#### For Android
 
 ```bash
 # using npm
@@ -67,7 +83,7 @@ npm run android
 yarn android
 ```
 
-### For iOS
+#### For iOS
 
 ```bash
 # using npm
@@ -93,6 +109,17 @@ Now that you have successfully run the app, let's modify it.
 ### Congratulations! :tada:
 
 You've successfully run and modified your React Native App. :partying_face:
+
+If you want to install the app manually, you can run the following in the command and download the APK file.
+
+#### For Android
+
+```bash
+cd android
+./gradlew assmebleRelease
+# download the APK file in android/app/build/outputs/apk/release
+```
+
 
 ### Resources
 
