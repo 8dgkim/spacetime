@@ -4,11 +4,14 @@
 ## TODO
 - apply features on each screen
 - request Android permissions
+   - read/write external storage not working
 - hide status bar
 
+### Sandclock
+- design on Figma
+- set behaviors and logic
 
 ### Journal
-- set stack navigator
 - set edit entry screen
    - decide text editor features
 - learn local storage management
@@ -18,16 +21,16 @@
 - sync option; but where?
 
 ### Direction
-- change to bold text
 - fix negative time distance
 - fix empty TextInput behavior after some input is erased
 
-### Sandclock
-- design on Figma
-- set behaviors and logic
 
 
 ## dev log
+- 2024-03-15
+   - screen: Space
+      - update location in real time
+      - minor fixes
 - 2024-03-14
    - branch: screen-journal
       - Android permissions not working; removed for now

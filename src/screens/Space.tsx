@@ -34,16 +34,22 @@ const Space: React.FC = () => {
   const [longitude, setLongitude] = useState(null);
 
   useEffect(() => {
-    Geolocation.getCurrentPosition(
-      position => {
-        setLatitude(position.coords.latitude);
-        setLongitude(position.coords.longitude);
-      },
-      error => {
-        console.log(error.code, error.message);
-      },
-      {enableHighAccuracy: true, timeout: 15000, maximumAge: 10000},
-    );
+    const intervalId = setInterval(() => {
+      Geolocation.getCurrentPosition(
+        position => {
+          setLatitude(position.coords.latitude);
+          setLongitude(position.coords.longitude);
+        },
+        error => {
+          console.log(error.code, error.message);
+        },
+        // `timeout`: max length of time (in milliseconds) the device is allowed to take in order to return a position
+        // `maximumAge`: max age in milliseconds of a possible cached position that is acceptable to return
+        {enableHighAccuracy: true, timeout: 10000, maximumAge: 10000},
+      );
+    }, 5000); // update current position every 5 seconds
+
+    return () => clearInterval(intervalId);
   }, []);
 
   return (

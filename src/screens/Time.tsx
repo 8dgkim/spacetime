@@ -11,7 +11,7 @@ const Time: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
-    }, 10); // update `currentTime` every 10 milliseconds
+    }, 1); // update `currentTime` every 1 millisecond
 
     return () => clearInterval(timer);
   }, []);
@@ -33,15 +33,9 @@ const Time: React.FC = () => {
 
   return (
     <View style={commonStyles.container}>
-      <Text style={commonStyles.time_date}>
-        {/* {currentTime.toLocaleDateString()} */}
-        {formatDate(currentTime)}
-      </Text>
+      <Text style={commonStyles.time_date}>{formatDate(currentTime)}</Text>
       <View style={{height: 10}} />
-      <Text style={commonStyles.time_time}>
-        {/* {currentTime.toLocaleTimeString()} */}
-        {formatTime(currentTime)}
-      </Text>
+      <Text style={commonStyles.time_time}>{formatTime(currentTime)}</Text>
     </View>
   );
 };
