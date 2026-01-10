@@ -58,7 +58,7 @@ const Navigation: React.FC = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName="Time" // TODO: change for dev & debug mode
+        initialRouteName="Sandclock" // TODO: change for dev & debug mode
         backBehavior="history"
         screenOptions={commonScreenOptions}>
         <Tab.Screen

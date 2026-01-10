@@ -2,6 +2,7 @@
 
 // commonStyles
 // spaceStyles
+// sandclockStyles
 // directionStyles
 // permissionStyles
 // journalStyles
@@ -85,6 +86,21 @@ export const spaceStyles = StyleSheet.create({
     fontFamily: 'NanumMyeongjoBold',
     marginTop: 10,
   },
+});
+
+export const sandclockStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    // backgroundColor: '#000', // Black background
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    // borderWidth: 5, // White border width
+    // borderColor: '#fff', // White border color
+  },
+  canvas: {
+    width: 400,
+    height: 600,
+  }
 });
 
 export const directionStyles = StyleSheet.create({
